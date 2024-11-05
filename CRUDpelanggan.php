@@ -78,7 +78,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email_pelanggan = $_POST['email_pelanggan'];
     $alamat_pelanggan = $_POST['alamat_pelanggan'];
 
-    // Jika tombol edit ditekan, lakukan update data
     if (isset($_POST['edit'])) {
         $sql = "UPDATE pelanggan SET Nama_Pelanggan='$nama_pelanggan', No_Hp_Pelanggan='$no_hp_pelanggan', Email_Pelanggan='$email_pelanggan', Alamat_Pelanggan='$alamat_pelanggan' WHERE ID_Pelanggan='$id_pelanggan'";
         if ($koneksi->query($sql) === TRUE) {
@@ -87,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } else {
             echo "Error: " . $sql . "<br>" . $koneksi->error;
         }
-    } else { // Jika tidak, lakukan insert data baru
+    } else {
         $sql = "INSERT INTO pelanggan (ID_Pelanggan, Nama_Pelanggan, No_Hp_Pelanggan, Email_Pelanggan, Alamat_Pelanggan) VALUES ('$id_pelanggan', '$nama_pelanggan', '$no_hp_pelanggan', '$email_pelanggan', '$alamat_pelanggan')";
         if ($koneksi->query($sql) === TRUE) {
             header("Location: " . $_SERVER['PHP_SELF']);
@@ -98,7 +97,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-// Fungsi delete data
 if (isset($_GET['delete'])) {
     $id_pelanggan = $_GET['delete'];
     $sql = "DELETE FROM pelanggan WHERE ID_Pelanggan='$id_pelanggan'";
@@ -110,7 +108,6 @@ if (isset($_GET['delete'])) {
     }
 }
 
-// Fungsi untuk mendapatkan data edit
 $id_pelanggan = '';
 $nama_pelanggan = '';
 $no_hp_pelanggan = '';
@@ -130,7 +127,6 @@ if (isset($_GET['edit'])) {
 }
 ?>
 
-<!-- Form Input -->
 <form action="" method="POST">
     <table>
         <tr>
@@ -166,7 +162,6 @@ if (isset($_GET['edit'])) {
     </table>
 </form>
 
-<!-- Tabel Data Pelanggan -->
 <table>
     <tr>
         <th>ID Pelanggan</th>
