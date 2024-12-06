@@ -361,6 +361,28 @@
     color: #34495e;
 }
 
+.product-remove {
+    background-color: transparent;
+    border: none;
+    color: #e74c3c;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.product-remove:hover {
+    color: #c0392b;
+}
+
+.product-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    justify-content: space-between; /* Tambahkan ini untuk memisahkan elemen */
+    padding-right: 10px; /* Tambahkan padding untuk ruang tombol */
+}
+
 .checkout-summary {
     border-top: 5px solid #e0e0e0;
     padding-top: 15px;
