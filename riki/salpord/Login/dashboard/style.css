@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+.modul{
+    width: 67%;
+    height: auto;
+}
+.atas{
+    display: flex;
+    align-items: center;
+    background-color: pink;
+    height: 80px;
+    width: 100%;
+}
+.Logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+.text{
+    height: 60px;
+    width: 100%;
+    
+}
+.gmbr{
+    height: 60px;
+    width: 70px;
+}
+.cari{
+    border-radius: 30px ;
+    margin-left: 100px;
+    height: 35px;
+    width: 500px;
+}
+.kiri{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.konten{
+    display: flex;
+    background-color: rgb(203, 203, 203);
+    height: 700px;
+    width: 33%;
+    
+    flex-direction: column;
+    align-items: center;
+    
+}
+.bungkus{
+    display: flex;
+    align-items: flex-start;
+    
+}
+.jenis2{
+    display: flex;
+    justify-content: left;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.produk{
+    position: relative;
+    left: 0px;
+    top: 0px ;
+    height: 619px;
+    width: 943px;
+    background-color: rgb(221, 221, 221);
+    overflow-y: auto; /* Tambahkan scrollbar vertikal jika konten melebihi tinggi */
+    overflow-x: hidden; /* Sembunyikan scrollbar horizontal */
+    border: 1px solid #ccc; /* Opsional: tambahkan border untuk tampilan */
+}
+.cari{
+    background: transparent;
+}
+.profil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 120px;
+    border-style: solid;
+    border-radius: 7px;
+}
+
+.button {
+    display: flex;
+    height: 30px;
+    width: 100%;
+}
+button{
+    width:100%;
+    height: 30px;
+}
+
+.produk1 {
+    text-align: center;
+    display: block;
+    background-color: transparent;
+    height: 180px;
+}
+
+.txt {
+    position: relative;
+    top: -40px;
+    background-color: pink;
+    padding: 10px;
+    border: transparent;
+    border-radius: 20px;
+    line-height: 0.5;
+    text-align: left;
+}
+
+.produk table img {
+    height: 140px;
+    width: 180px;
+    border: transparent;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px ;
+}
+
+.produk table td {
+    padding-left: 90px;
+    padding-bottom: 100px;
+}
+
+
+.keranjang {
+    margin-top: 20px;
+    background-color: pink;
+    width: 100%;
+    text-align: center;
+}
+
+.keranjang table {
+    border-style: solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
