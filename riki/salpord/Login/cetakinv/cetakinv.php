@@ -152,6 +152,10 @@
             </div>
         </div>
         </div>
+        <div class="button-container">
+            <button class="btn cetak">CETAK</button>
+            <button class="btn selesai" onclick="window.location.href='riwayat.php'">SELESAI</button>
+        </div>
     </div>
 </body>
 </html>
