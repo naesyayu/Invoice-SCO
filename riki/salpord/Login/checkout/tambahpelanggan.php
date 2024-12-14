@@ -1,40 +1,32 @@
 <?php
-include('../koneksi.php');
+include('koneksi.php');
 
-// Inisialisasi variabel kosong untuk form
-$id_pelanggan = '';
 $nama_pelanggan = '';
 $no_hp_pelanggan = '';
 $email_pelanggan = '';
 $alamat_pelanggan = '';
 
-// Proses submit form (hanya untuk tambah data baru)
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $id_pelanggan = $_POST['id_pelanggan'];
     $nama_pelanggan = $_POST['nama_pelanggan'];
     $no_hp_pelanggan = $_POST['no_hp_pelanggan'];
     $email_pelanggan = $_POST['email_pelanggan'];
     $alamat_pelanggan = $_POST['alamat_pelanggan'];
 
-    // Tambahkan data baru
-    $sql = "INSERT INTO pelanggan (ID_Pelanggan, Nama_Pelanggan, No_Hp_Pelanggan, Email_Pelanggan, Alamat_Pelanggan) 
-            VALUES ('$id_pelanggan', '$nama_pelanggan', '$no_hp_pelanggan', '$email_pelanggan', '$alamat_pelanggan')";
+    $sql = "INSERT INTO pelanggan (Nama_Pelanggan, No_Hp_Pelanggan, Email_Pelanggan, Alamat_Pelanggan) 
+            VALUES ('$nama_pelanggan', '$no_hp_pelanggan', '$email_pelanggan', '$alamat_pelanggan')";
 
-            if ($koneksi->query($sql) === TRUE) {
-                // Hapus session jika ada (opsional)
-                session_start();
-                session_unset();
-                session_destroy();
-        
-                // Redirect ke checkout.php
-                header("Location: checkout.php");
-                exit();
-            } else {
-                echo "Error: " . $sql . "<br>" . $koneksi->error;
-            }
+    if ($koneksi->query($sql) === TRUE) {
+        session_start();
+        session_unset();
+        session_destroy();
+
+        header("Location: checkout.php");
+        exit();
+    } else {
+        echo "Error: " . $sql . "<br>" . $koneksi->error;
+    }
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!-- Header -->
     <div class="header">
         <div class="logo">
-            <img src="../logo hitam.png" alt="Logo">
+            <img src="logo hitam.png" alt="Logo">
         </div>
         <div class="judul">Checkout</div>
     </div>
@@ -72,15 +64,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </li>
             <li>
                 <i class="fas fa-bell"></i>
-                <span>Riwayat</span>
+                <span>Invoice</span>
             </li>
         </ul>
         <ul class="logout">
             <li>
-                <button class="btn-nobg" onclick="window.location.href='../logout.php'">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <span>Logout</span>
-                </button>
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
             </li>
         </ul>
     </div>
@@ -89,10 +79,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <h1>Tambah Member Baru</h1>
         <form action="" method="POST">
             <table>
-                <tr>
-                    <td><label for="id_pelanggan">ID Pelanggan:</label></td>
-                    <td><input type="text" name="id_pelanggan" value="<?php echo htmlspecialchars($id_pelanggan); ?>" required></td>
-                </tr>
                 <tr>
                     <td><label for="nama_pelanggan">Nama Pelanggan:</label></td>
                     <td><input type="text" name="nama_pelanggan" value="<?php echo htmlspecialchars($nama_pelanggan); ?>" required></td>
@@ -103,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </tr>
                 <tr>
                     <td><label for="email_pelanggan">Email Pelanggan:</label></td>
-                    <td><input type="text" name="email_pelanggan" value="<?php echo htmlspecialchars($email_pelanggan); ?>" required></td>
+                    <td><input type="email" name="email_pelanggan" value="<?php echo htmlspecialchars($email_pelanggan); ?>" required></td>
                 </tr>
                 <tr>
                     <td><label for="alamat_pelanggan">Alamat Pelanggan:</label></td>
