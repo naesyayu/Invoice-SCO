@@ -1,56 +1,28 @@
 <?php
 include('koneksi.php');
 
-// Inisialisasi variabel kosong untuk form
-$id_pelanggan = '';
 $nama_pelanggan = '';
 $no_hp_pelanggan = '';
 $email_pelanggan = '';
 $alamat_pelanggan = '';
 
-// Cek apakah ini mode edit
-if (isset($_GET['edit'])) {
-    $id_pelanggan = $_GET['edit'];
-    $sql = "SELECT * FROM pelanggan WHERE ID_Pelanggan='$id_pelanggan'";
-    $result = $koneksi->query($sql);
-    if ($result->num_rows > 0) {
-        $data = $result->fetch_assoc();
-        $nama_pelanggan = $data['Nama_Pelanggan'];
-        $no_hp_pelanggan = $data['No_Hp_Pelanggan'];
-        $email_pelanggan = $data['Email_Pelanggan'];
-        $alamat_pelanggan = $data['Alamat_Pelanggan'];
-    }
-}
-
-// Proses submit form (edit atau tambah data)
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $id_pelanggan = $_POST['id_pelanggan'];
     $nama_pelanggan = $_POST['nama_pelanggan'];
     $no_hp_pelanggan = $_POST['no_hp_pelanggan'];
     $email_pelanggan = $_POST['email_pelanggan'];
     $alamat_pelanggan = $_POST['alamat_pelanggan'];
 
-    if (isset($_POST['edit'])) {
-        // Update data
-        $sql = "UPDATE pelanggan SET Nama_Pelanggan='$nama_pelanggan', No_Hp_Pelanggan='$no_hp_pelanggan', Email_Pelanggan='$email_pelanggan', Alamat_Pelanggan='$alamat_pelanggan' WHERE ID_Pelanggan='$id_pelanggan'";
-        if ($koneksi->query($sql) === TRUE) {
-            header("Location: crudpelanggan.php");
-            exit();
-        } else {
-            echo "Error: " . $sql . "<br>" . $koneksi->error;
-        }
+    $sql = "INSERT INTO pelanggan (Nama_Pelanggan, No_Hp_Pelanggan, Email_Pelanggan, Alamat_Pelanggan) 
+            VALUES ('$nama_pelanggan', '$no_hp_pelanggan', '$email_pelanggan', '$alamat_pelanggan')";
+    if ($koneksi->query($sql) === TRUE) {
+        header("Location: crudpelanggan.php"); // Redirect ke halaman CRUD setelah berhasil
+        exit();
     } else {
-        // Tambahkan data baru
-        $sql = "INSERT INTO pelanggan (ID_Pelanggan, Nama_Pelanggan, No_Hp_Pelanggan, Email_Pelanggan, Alamat_Pelanggan) VALUES ('$id_pelanggan', '$nama_pelanggan', '$no_hp_pelanggan', '$email_pelanggan', '$alamat_pelanggan')";
-        if ($koneksi->query($sql) === TRUE) {
-            header("Location: crudpelanggan.php");
-            exit();
-        } else {
-            echo "Error: " . $sql . "<br>" . $koneksi->error;
-        }
+        echo "Error: " . $sql . "<br>" . $koneksi->error;
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -115,10 +87,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <h1><?php echo isset($_GET['edit']) ? "Edit" : "Tambah"; ?> Data Pelanggan</h1>
 <form action="" method="POST">
     <table>
-        <tr>
-            <td><label for="id_pelanggan">ID Pelanggan:</label></td>
-            <td><input type="text" name="id_pelanggan" value="<?php echo htmlspecialchars($id_pelanggan); ?>" required></td>
-        </tr>
         <tr>
             <td><label for="nama_pelanggan">Nama Pelanggan:</label></td>
             <td><input type="text" name="nama_pelanggan" value="<?php echo htmlspecialchars($nama_pelanggan); ?>" required></td>
