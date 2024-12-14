@@ -140,37 +140,18 @@
             background-color: #45a049;
         }
 
-        button.tambah {
-            background-color: #58abea;
-            color: white;
-            width: 170px;
-            height: 70px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 20px;
-            margin-right: 10px;
-            transition: background-color 0.3s ease;
-            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        button.tambah:hover {
-            background-color: #255b78;
-        }
-        
-        /* Tombol kembali */
         button.kembali {
             background-color: #58abea;
             color: white;
-            width: 170px;
-            height: 70px;
+            width: 220px;
+            height: 45px;
             border: none;
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
             margin-top: 20px;
             transition: background-color 0.3s ease;
+            box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.5);
         }
         
         button.kembali:hover {
