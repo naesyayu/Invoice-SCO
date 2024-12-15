@@ -79,7 +79,7 @@ if (isset($_GET['delete'])) {
     <h1>Daftar Produk</h1>
     <div class="tombol-wrapper">
         <!-- Tombol untuk menambahkan data produk -->
-        <button onclick="window.location.href='crudproduk2.php'">Tambahkan Produk Baru</button>
+        <button class="tambah" onclick="window.location.href='crudproduk2.php'">Tambahkan Produk Baru</button>
     </div>
     <!-- Tabel Data Produk -->
 <table border="1">
