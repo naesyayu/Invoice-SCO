@@ -179,8 +179,8 @@
         button.tambah {
             background-color: #58abea;
             color: white;
-            width: 170px;
-            height: 70px;
+            width: 233px;
+            height: 45px;
             border: none;
             border-radius: 5px;
             font-size: 16px;
@@ -194,13 +194,12 @@
         button.tambah:hover {
             background-color: #255b78;
         }
-        
-        /* Tombol kembali */
+    
         button.kembali {
             background-color: #58abea;
             color: white;
-            width: 170px;
-            height: 70px;
+            width: 233px;
+            height: 45px;
             border: none;
             border-radius: 5px;
             font-size: 16px;
@@ -213,7 +212,6 @@
             background-color: #255b78;
         }
         
-        /* Wrapper tombol */
         .tombol-wrapper {
             text-align: left;
             margin-top: 20px;
