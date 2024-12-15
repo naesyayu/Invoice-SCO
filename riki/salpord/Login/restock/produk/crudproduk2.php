@@ -171,8 +171,8 @@ if (isset($_GET['edit'])) {
         </tr>
     </table>
 </form>
-<div class="tombol-wrapper">
-    <button class="kembali" onclick="window.location.href='crudproduk.php'">Kembali</button>
+<div class="tombol-wrapper"> 
+    <button class="kembali" onclick="window.location.href='crudproduk.php'">Kembali ke Data Produk</button>
 </div>
     </div>
 </body>
