@@ -74,6 +74,10 @@ if (isset($_GET['delete'])) {
     <!-- Main content -->
     <div class="main">
     <h1>Daftar Pelanggan</h1>
+    <div class="tombol-wrapper">
+        <!-- Tombol untuk menambahkan data karyawan -->
+        <button class="tambah" onclick="window.location.href='crudpelanggan2.php'">Tambahkan Pelanggan Baru</button>
+    </div>
     <table border="1">
     <tr>
         <th>ID Pelanggan</th>
@@ -109,10 +113,6 @@ if (isset($_GET['delete'])) {
     }
     ?>
 </table>
-<div class="tombol-wrapper">
-    <!-- Tombol untuk menambahkan data karyawan -->
-    <button class="tambah" onclick="window.location.href='crudpelanggan2.php'">Tambahkan Pelanggan Baru</button>
-</div>
 </div>
 </body>
 </html>
