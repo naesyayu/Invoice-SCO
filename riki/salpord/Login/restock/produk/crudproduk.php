@@ -77,6 +77,10 @@ if (isset($_GET['delete'])) {
     <!-- Main content -->
     <div class="main">
     <h1>Daftar Produk</h1>
+    <div class="tombol-wrapper">
+        <!-- Tombol untuk menambahkan data produk -->
+        <button onclick="window.location.href='crudproduk2.php'">Tambahkan Produk Baru</button>
+    </div>
     <!-- Tabel Data Produk -->
 <table border="1">
     <tr>
@@ -117,10 +121,6 @@ if (isset($_GET['delete'])) {
     }
     ?>
 </table>
-<div class="tombol-wrapper">
-    <!-- Tombol untuk menambahkan data produk -->
-    <button onclick="window.location.href='crudproduk2.php'">Tambahkan Produk Baru</button>
-</div>
     </div>
 </body>
 </html>
