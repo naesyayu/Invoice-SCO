@@ -173,11 +173,12 @@ body {
 }
 
 .product-card img {
-    width: 105px; 
+    width: 127px; 
     height: 127px;
-    object-fit: contain; 
+    overflow: hidden; 
+    object-fit: cover;
     background: transparent;
-    margin-top: -30px;
+    margin-top: -17px;
     z-index: 1;
 }
 
