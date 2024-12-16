@@ -199,3 +199,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['no_invoice'])) {
     </div>
 </body>
 </html>
+<script>
+        const printBtn = document.getElementById('cetak');
+        printBtn.addEventListener('click', function(){
+            window.print();
+        })
+    </script>
