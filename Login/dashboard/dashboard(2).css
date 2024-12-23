@@ -451,6 +451,19 @@ body {
     color: #313030;
 }
 
+.kuantitas {
+    display: flex;
+    align-items: center;
+    border: 2px solid #5b6969; 
+    border-radius: none; 
+    overflow: hidden;
+    width: 95px; 
+    height: 25px; 
+    background-color: white; 
+    margin-top: 5px;
+    margin-left: 23px;
+}
+
 /* -----------------------Checkout Bawah-------------------------*/
 
 .checkout-summary {
