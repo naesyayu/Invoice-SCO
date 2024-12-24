@@ -129,19 +129,6 @@
             width: calc(100% - 120px);
         }
 
-        .aksi button.edit {
-            background-color: #FFFF00;
-            color: #000000;
-            width: 70px;
-            height: 40px;
-        }
-
-        .aksi button.hapus {
-            background-color: #FF0000;
-            color: #FFFFFF;
-            width: 70px;
-            height: 40px;
-        }
         table {
             border-collapse: collapse;
             width: 100%;
