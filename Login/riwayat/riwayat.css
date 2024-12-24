@@ -95,8 +95,8 @@
         }
 
         .sidebar ul li.active {
-            background-color: #bbbbbb; /* Warna latar belakang untuk elemen aktif */
-            color: #7a3e06; /* Warna teks untuk elemen aktif */
+            background-color: #bbbbbb; 
+            color: #7a3e06; 
             border-radius: 10px;
             padding: 10px 0;
         }
@@ -104,13 +104,6 @@
         .sidebar .logout {
             margin-top: auto;
             margin-bottom: 30px;
-        }
-
-        .btn-nobg {
-            width: 100%;
-            height: 100%;
-            all: unset; /* Reset semua properti */
-            cursor: pointer; /* Tambahkan kursor pointer */
         }
 /*-----------------------------Bagian Tengah-------------------------------------*/
         .main {
@@ -120,46 +113,29 @@
             width: calc(100% - 120px);
         }
 
-        .main ul {
-            list-style: none;
+        table {
+            border-collapse: collapse;
+            width: 100%;
         }
 
-        .main ul li {
-        margin-bottom: 20px; 
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #acaaaa;
         }
 
-        .btn-action {
-            width: 100%; /* Lebar penuh */
-            height: 100%; /* Tinggi penuh */
-            background: transparent; /* Latar belakang transparan */
-            border: none; /* Tanpa border */
-            cursor: pointer; /* Kursor pointer */
+        th {
+            background-color: #d3d3d3;
         }
 
-        .tabel {
-            background-color: #7fb7ff;
-            border-radius: 35px;
-            padding: 15px 20px;
-            color: white;
-            font-size: 14px;
-            font-weight: 500;
-            display: flex;
-            justify-content: space-between;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        td a {
+            font-size: 12px; 
+            color: blue; 
+            text-decoration: underline; 
+            cursor: pointer; 
         }
 
-        .tabel i {
-            font-size: 40px; /* Perbesar ukuran ikon */
-            margin-right: 15px;
-            color: white;
+        td a:hover {
+            color: darkblue;
+            text-decoration: none; 
         }
-
-        .teks {
-    font-family: 'Poppins', sans-serif; /* Menambahkan font fallback */
-    font-size: 25px; /* Ukuran teks */
-    margin-left: 0; /* Hilangkan margin negatif */
-    flex: 1;
-    text-align: left; /* Pastikan teks rata kiri */
-    display: block; /* Ubah menjadi blok agar properti text-align berfungsi */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Menambahkan shadow */
-}
