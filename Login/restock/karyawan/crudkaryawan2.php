@@ -83,6 +83,12 @@ if (isset($_GET['edit'])) {
                 </a>
             </li>
             <li>
+                <a href="rekapitulasiharian.php">
+                    <i class="fas fa-align-justify"></i>
+                    <span>Rekap</span>
+                </a>
+            </li>
+            <li>
                 <a href="../riwayati invoice admin/riwayatinvadmin.php">
                     <i class="fas fa-bell"></i>
                     <span>Invoice</span>
