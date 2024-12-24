@@ -70,19 +70,12 @@
         </div>
         <script>
             function setActive(button) {
-                // Menghapus kelas 'active-button' dari semua tombol
                 const buttons = document.querySelectorAll('.tambah');
                 buttons.forEach(btn => {
                     btn.classList.remove('active-button');
                 });
-    
-                // Menambahkan kelas 'active-button' pada tombol yang diklik
                 button.classList.add('active-button');
-    
-                // Mengambil URL dari atribut data-url
                 const url = button.getAttribute('data-url');
-    
-                // Mengarahkan ke URL yang diambil
                 window.location.href = url;
             }
         </script>
@@ -93,6 +86,12 @@
         <th>Jumlah Item Terjual</th>
         <th>Pendapatan Toko</th>
         <th>Laba Toko</th>
+    </tr>
+    <tr>
+        <td>Januari, 2025</td>
+        <td>500 item</td>
+        <td>Rp. 50,000,000</td>
+        <td>Rp. 35,750,000</td>
     </tr>
     </table>
 </div>
