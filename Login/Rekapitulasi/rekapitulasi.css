@@ -137,11 +137,11 @@
         th, td {
             text-align: left;
             padding: 8px;
-            border: 1px solid #ddd;
+            border: 1px solid #acaaaa;
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: #d3d3d3;
         }
 
         button.tambah {
