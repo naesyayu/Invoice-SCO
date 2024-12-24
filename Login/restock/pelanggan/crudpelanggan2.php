@@ -71,6 +71,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <span>Invoice</span>
                 </a>
             </li>
+            <li>
+                <a href="rekapitulasiharian.php">
+                    <i class="fas fa-align-justify"></i>
+                    <span>Rekap</span>
+                </a>
+            </li>
         </ul>
         <ul class="logout">
             <li>
