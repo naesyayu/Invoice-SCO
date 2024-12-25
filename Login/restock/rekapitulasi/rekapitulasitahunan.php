@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekapitulasi Tahunan</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="rekapitulasi.css?v=<?php echo time(); ?>" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <img src="logo putih.png" alt="Logo">
+        </div>
+        <div class="judul">Rekapitulasi</div>
+    </div>
+
+    <!-- Sidebar kiri -->
+    <div class="sidebar">
+    <ul>
+            <li>
+                <a href="../produk/crudproduk.php">
+                    <i class="fas fa-warehouse"></i>
+                    <span>Produk</span>
+                </a>
+            </li>
+            <li>
+                <a href="../karyawan/crudkaryawan.php">
+                    <i class="fas fa-id-badge"></i>
+                    <span>Karyawan</span>
+                </a>
+            </li>
+            <li>
+                <a href="../pelanggan/crudpelanggan.php">
+                    <i class="fas fa-users"></i>
+                    <span>Pelanggan</span>
+                </a>
+            </li>
+            <li>
+                <a href="../diskon/cruddiskon.php">
+                    <i class="fas fa-id-badge"></i>
+                    <span>Diskon</span>
+                </a>
+            </li>
+            <li>
+                <a href="../riwayati invoice admin/riwayatinvadmin.php">
+                    <i class="fas fa-bell"></i>
+                    <span>Invoice</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="rekapitulasi.php">
+                    <i class="fas fa-align-justify"></i>
+                    <span>Rekap</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="logout">
+            <li>
+                <a href="../../logout.php">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- Main content -->
+    <div class="main">
+        <div class="tombol-wrapper">
+            <button class="tambah" data-url="rekapitulasiharian.php" onclick="setActive(this)">HARIAN</button>
+            <button class="tambah" data-url="rekapitulasibulanan.php" onclick="setActive(this)">BULANAN</button>
+            <button class="tambah" data-url="rekapitulasitahunan.php" onclick="setActive(this)">TAHUNAN</button>
+        </div>
+        <script>
+            function setActive(button) {
+                const buttons = document.querySelectorAll('.tambah');
+                buttons.forEach(btn => {
+                    btn.classList.remove('active-button');
+                });
+    
+                button.classList.add('active-button');
+                const url = button.getAttribute('data-url');
+                window.location.href = url;
+            }
+        </script>
+
+    <table border="1">
+    <tr>
+        <th>Tahun</th>
+        <th>Jumlah Item Terjual</th>
+        <th>Pendapatan Toko</th>
+        <th>Laba Toko</th>
+    </tr>
+    <tr>
+        <td>2025</td>
+        <td>4500 item</td>
+        <td>Rp. 350,000,000</td>
+        <td>Rp. 267,900,000</td>
+    </tr>
+    </table>
+</div>
+</body>
+</html>
