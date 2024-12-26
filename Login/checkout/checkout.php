@@ -139,10 +139,10 @@ if(isset($_GET['Diskon'])) {
                         <?php
                         } else { ?>
                             x<?= $show['Kuantitas_Produk'] ?>
-                            <button class="editqnty" onclick="window.location.href='checkout.php?edit=1&kodeqnty=<?= $kodeProduk ?>'">edit</button>
                         <?php
                         } ?>
                         </p>
+                    <button class="editqnty" onclick="window.location.href='checkout.php?edit=1&kodeqnty=<?= $kodeProduk ?>'">edit</button>
                     </div>
                     <div class="product-meta">
                         <div class="product-text">
@@ -259,8 +259,8 @@ if(isset($_GET['Diskon'])) {
         <!-- Milih diskon -->
         <form method="GET" action="">
         <input type="hidden" name="No_Hp_Pelanggan" value="<?= $No_Hp_Pelanggan ?>">
-        <label for="diskon">Pilih Diskon:</label>
-        <select id="diskon" name="Diskon" onchange="this.form.submit()">
+        <label for="diskon" style="font-family: 'Poppins'; font-weight: 500; color: #042344; margin-right: 9px;">Pilih Diskon:  </label>
+        <select class="pilihdisc" id="diskon" name="Diskon" onchange="this.form.submit()">
             <option value="">-- Pilih Diskon --</option>
         <?php
                 foreach($result as $diskonlist) {
