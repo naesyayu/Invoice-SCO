@@ -47,7 +47,7 @@
             margin: 0 auto;
             text-shadow: 0px 0px 10px rgba(26, 24, 24, 0.537);
             letter-spacing: 2px;
-            margin-right: 50rem;
+            margin-right: 43rem;
             
         }
 
@@ -264,6 +264,31 @@
 }
 
 
+.editqnty {
+    background-color: #3b95f5; 
+    color: #fff; 
+    font-family: 'poppins';
+    font-weight: 300;
+    border: none; 
+    padding: 5px 8px; 
+    font-size: 10px; 
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.2s; 
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; 
+    top: -10px; 
+    margin-bottom: -7px;
+}
+
+.editqnty:hover {
+    background-color: #07366b; 
+}
+
+
+
  /* -------------------------------------Sidebar Kanan ------------------------------------------------*/
  .checkout-sidebar {
     width: 300px;
@@ -383,6 +408,45 @@
 .dropdown-menu.open {
     display: block; /* Muncul saat class 'open' ditambahkan */
 }
+
+
+.btn-cari {
+    background-color: #3b95f5; 
+    color: #fff; 
+    font-family: 'Poppins';
+    letter-spacing: 1px;
+    border: none; 
+    padding: 7px 9px; 
+    font-size: 10px; 
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 13px;
+}
+
+.btn-cari:hover {
+    background-color: #0056b3;
+}
+
+.pilihdisc{
+    background-color: #edeaea; 
+    color: #000000; 
+    font-family: 'Poppins';
+    letter-spacing: 1px;
+    border: none; 
+    padding: 8px 9px; 
+    font-size: 12px; 
+    font-weight: 500;
+    border-radius: 5px; 
+    cursor: pointer; 
+    border: 1px solid#000000;
+    cursor: pointer;
+    box-shadow: 5px 2px 6px rgba(0, 0, 0, 0.5);
+    margin-bottom: 13px;
+}
+
 
 .checkout-summary {
     border-top: 5px solid #e0e0e0;
